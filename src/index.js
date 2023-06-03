@@ -8,15 +8,15 @@ import { CurrentUserProvider } from "./contexts/CurrentUserContext";
 import { ProfileDataProvider } from "./contexts/ProfileDataContext";
 
 ReactDOM.render(
-    <React.StrictMode>
-      <Router>
-        <CurrentUserProvider>
-          <ProfileDataProvider>
-            <App />
-          </ProfileDataProvider>
-        </CurrentUserProvider>
-      </Router>
-    </React.StrictMode>,
+  //  <React.StrictMode>  NB: leave this line on before deployment to 
+  <Router>
+  <CurrentUserProvider>
+    <ProfileDataProvider>
+      <App />
+    </ProfileDataProvider>
+  </CurrentUserProvider>
+   </Router>,
+//    </React.StrictMode>, NB to locate problem before final deployment
     document.getElementById("root")
   );
 
